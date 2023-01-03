@@ -7,31 +7,31 @@ import ReceiptIcon from '@mui/icons-material/Receipt';
 export const menuItems= [
     {
         id: 0,
-        title: "Dashboard",
+        title: "Stock",
         link: '/',
         icon: Dashboard,
     },
     {
         id: 1,
-        title: "Create Product",
-        link: "/create-product",
-        icon: PostAddIcon,
-    },
-    {
-        id: 2,
-        title: "Create Vendor",
-        link: "/create-vendor",
-        icon: DomainAddIcon,
-    },
-    {
-        id: 3,
-        title: "Purchase Entry",
+        title: "Purchase",
         link: "/purchase-entry",
         icon: ListAltIcon,
     },
     {
+        id: 2,
+        title: "Add Product",
+        link: "/create-product",
+        icon: PostAddIcon,
+    },
+    {
+        id: 3,
+        title: "Add Vendor",
+        link: "/create-vendor",
+        icon: DomainAddIcon,
+    },
+    {
         id: 4,
-        title: "Sales Entry",
+        title: "Sales",
         link: "/sales-entry",
         icon: ReceiptIcon,
     },

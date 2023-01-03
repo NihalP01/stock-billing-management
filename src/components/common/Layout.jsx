@@ -6,7 +6,7 @@ const Layout = ({ headerName, children }) => {
   return (
     <>
       <Sidebar sidebarHeader={headerName} />
-      <Box style={{ display: "flex", justifyContent: "center" }} mt={10}>
+      <Box style={{ display: "flex", justifyContent: "center" }} mt={12} ml={"300px"}>
         {children}
       </Box>
     </>

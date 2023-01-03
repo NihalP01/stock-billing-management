@@ -15,7 +15,7 @@ function App() {
           <Route
             path="/"
             element={
-              <Layout headerName={"Dashboard"}>
+              <Layout headerName={"Stock"}>
                 <DashboardHome />
               </Layout>
             }
@@ -23,7 +23,7 @@ function App() {
           <Route
             path="/create-product"
             element={
-              <Layout headerName={"Create Product"}>
+              <Layout headerName={"Add Product"}>
                 <CreateProductForm />
               </Layout>
             }
@@ -31,7 +31,7 @@ function App() {
           <Route
             path="/create-vendor"
             element={
-              <Layout headerName={"Create Vendor"}>
+              <Layout headerName={"Add Vendor"}>
                 <CreateVendorForm />
               </Layout>
             }
@@ -39,7 +39,7 @@ function App() {
           <Route
             path="/purchase-entry"
             element={
-              <Layout headerName={"Purchase entry"}>
+              <Layout headerName={"Purchase"}>
                 <PurchaseEntryForm />
               </Layout>
             }
@@ -47,7 +47,7 @@ function App() {
           <Route
             path="/sales-entry"
             element={
-              <Layout headerName={"Sales entry"}>
+              <Layout headerName={"Sales"}>
                 <SalesEntryForm />
               </Layout>
             }
