@@ -43,6 +43,9 @@ const CreateProductForm = () => {
             ))}
           </Box>
         </Grid>
+        <Box width={"100%"} mt={4} style={{ display: "flex", justifyContent: "center" }}>
+          <Controls.CustomButton text={"Submit"} />
+        </Box>
       </Grid>
     </FormLayout>
   );

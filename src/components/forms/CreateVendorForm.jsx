@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import React, { useState } from "react";
 import FormLayout from "../common/FormLayout";
 import { Controls } from "../controls/Controls";
@@ -19,7 +19,12 @@ const CreateVendorForm = () => {
             <Controls.CustomField label="Vendor name" size="small" />
           </Grid>
           <Grid item xs={12}>
-            <Controls.CustomField label="Vendor address" size="small" multiline={true} rows={3}  />
+            <Controls.CustomField
+              label="Vendor address"
+              size="small"
+              multiline={true}
+              rows={3}
+            />
           </Grid>
           <Grid item xs={6}>
             <Controls.CustomSelect
@@ -30,11 +35,22 @@ const CreateVendorForm = () => {
             />
           </Grid>
           <Grid item xs={6}>
-            <Controls.CustomField label="PIN" type={'number'} size="small"  />
+            <Controls.CustomField label="PIN" type={"number"} size="small" />
           </Grid>
           <Grid item xs={12}>
-            <Controls.CustomField label="GST Number" inputProps={{ style: { textTransform: "uppercase" } }} size="small"  />
+            <Controls.CustomField
+              label="GST Number"
+              inputProps={{ style: { textTransform: "uppercase" } }}
+              size="small"
+            />
           </Grid>
+          <Box
+            width={"100%"}
+            mt={4}
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <Controls.CustomButton text={"Submit"} />
+          </Box>
         </Grid>
       </form>
     </FormLayout>
