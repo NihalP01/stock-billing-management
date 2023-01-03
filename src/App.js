@@ -1,11 +1,11 @@
 import "./App.css";
 import Layout from "./components/common/Layout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ProductListing from "./components/pages/ProductListing";
 import CreateProductForm from "./components/forms/CreateProductForm";
 import CreateVendorForm from "./components/forms/CreateVendorForm";
 import PurchaseEntryForm from "./components/forms/PurchaseEntryForm";
 import SalesEntryForm from "./components/forms/SalesEntryForm";
+import DashboardHome from "./components/dashboard/DashboardHome";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
             path="/"
             element={
               <Layout headerName={"Dashboard"}>
-                <ProductListing />
+                <DashboardHome />
               </Layout>
             }
           />
@@ -47,7 +47,7 @@ function App() {
           <Route
             path="/sales-entry"
             element={
-              <Layout headerName={'Sales entry'}>
+              <Layout headerName={"Sales entry"}>
                 <SalesEntryForm />
               </Layout>
             }

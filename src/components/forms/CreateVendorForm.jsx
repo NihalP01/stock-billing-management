@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import FormLayout from "../common/FormLayout";
 import { Controls } from "../controls/Controls";
-import { states } from "../data/states";
+import { states } from "../../data/states";
 
 const CreateVendorForm = () => {
   const [state, setState] = useState("");

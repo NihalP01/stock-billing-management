@@ -2,7 +2,7 @@ import { Box, Chip, Grid, Typography } from "@mui/material";
 import React from "react";
 import FormLayout from "../common/FormLayout";
 import { Controls } from "../controls/Controls";
-import { gstData } from "../data/gstData";
+import { gstData } from "../../data/gstData";
 
 const CreateProductForm = () => {
   return (
