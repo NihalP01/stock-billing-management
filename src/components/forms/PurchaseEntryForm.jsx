@@ -1,11 +1,13 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Chip, Grid, Typography } from "@mui/material";
 import React from "react";
+import { gstData } from "../../data/gstData";
 import FormLayout from "../common/FormLayout";
 import { Controls } from "../controls/Controls";
+import Popup from "../controls/Popup";
 
 const PurchaseEntryForm = () => {
   const handleSubmit = () => {
-    console.log("jhg");
+    console.log("log");
   };
   return (
     <FormLayout>
@@ -68,7 +70,56 @@ const PurchaseEntryForm = () => {
             </Typography>
           </Grid>
           <Grid item xs={4} display="flex">
-            <Controls.CustomButton color='success' text="Add item" />
+            <Popup title="Item description" btnText={"Add item"}>
+              <Grid container spacing={2}>
+                <Grid item xs={6}>
+                  <Controls.CustomSelect
+                    label="Product"
+                    options={[
+                      { id: 1, title: "Product 1", value: 1 },
+                      { id: 2, title: "Product 2", value: 2 },
+                    ]}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Controls.CustomField
+                    label="Quantity"
+                    size="small"
+                    type="number"
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Controls.CustomField
+                    label="Rate"
+                    size="small"
+                    type="number"
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body2" textAlign={"left"} gutterBottom>
+                    GST
+                  </Typography>
+                  <Box>
+                    {gstData.map((item) => (
+                      <Chip
+                        key={item.id}
+                        style={{
+                          padding: "0.8rem",
+                          margin: "0.2rem",
+                          cursor: "pointer",
+                        }}
+                        label={item.value}
+                        variant={"outlined"}
+                        size={"medium"}
+                      />
+                    ))}
+                  </Box>
+                </Grid>
+                <Grid item xs={12}>
+                  <Controls.CustomField label="Total" size="small" />
+                </Grid>
+              </Grid>
+            </Popup>
           </Grid>
         </Grid>
       </form>
