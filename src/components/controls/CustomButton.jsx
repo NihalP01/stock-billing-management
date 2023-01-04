@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import React from "react";
 
 const CustomButton = (props) => {
-  const {text, color, onClick} = props;
+  const {text, color, onClick, ...other} = props;
   return (
     <Button
       variant="contained"
@@ -10,6 +10,7 @@ const CustomButton = (props) => {
       size="small"
       color={color}
       onClick={onClick}
+      {...other}
     >
       {text}
     </Button>

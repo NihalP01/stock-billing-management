@@ -5,7 +5,6 @@ import ProductListing from "../../pages/ProductListing";
 const DashboardHome = () => {
   return (
     <Box>
-      <h4>This is Dashboard</h4>
       <ProductListing />
     </Box>
   );
