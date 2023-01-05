@@ -9,7 +9,7 @@ const ProductListing = () => {
   return (
     <Box>
       <h4>Product List</h4>
-      {data.length === 0 ? (
+      {!data ? (
         <div>
           <h1>No data</h1>
         </div>
