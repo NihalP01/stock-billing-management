@@ -1,11 +1,12 @@
 import { Box } from "@mui/material";
 import React from "react";
-import ProductListing from "../../pages/ProductListing";
+import { Sections } from "../components/sections/Sections";
 
 const DashboardHome = () => {
   return (
     <Box>
-      <ProductListing />
+      <Sections.ProductListing />
+      <Sections.PurchaseListing />
     </Box>
   );
 };

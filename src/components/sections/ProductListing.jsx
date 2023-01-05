@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import { Controls } from "../components/controls/Controls";
+import { Controls } from "../controls/Controls";
 
 const ProductListing = () => {
   
@@ -8,7 +8,8 @@ const ProductListing = () => {
 
   return (
     <Box>
-      {!data ? (
+      <h4>Product List</h4>
+      {data.length === 0 ? (
         <div>
           <h1>No data</h1>
         </div>

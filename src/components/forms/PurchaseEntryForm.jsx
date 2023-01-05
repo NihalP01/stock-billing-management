@@ -121,7 +121,11 @@ const PurchaseEntryForm = () => {
             <Grid item xs={12}>
               <Controls.CustomSelect
                 label={"Vendor"}
-                options={[{ id: 1, title: "A", value: "A" }]}
+                options={[
+                  { id: 1, title: "Vendor A", value: "Vendor A" },
+                  { id: 2, title: "Vendor B", value: "Vendor B" },
+                  { id: 3, title: "Vendor C", value: "Vendor C" },
+                ]}
                 value={vendor}
                 onChange={(e) => setVendor(e.target.value)}
               />

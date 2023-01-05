@@ -5,7 +5,7 @@ import CreateProductForm from "./components/forms/CreateProductForm";
 import CreateVendorForm from "./components/forms/CreateVendorForm";
 import PurchaseEntryForm from "./components/forms/PurchaseEntryForm";
 import SalesEntryForm from "./components/forms/SalesEntryForm";
-import DashboardHome from "./components/dashboard/DashboardHome";
+import DashboardHome from "./pages/DashboardHome";
 
 function App() {
   return (
