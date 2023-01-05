@@ -39,7 +39,6 @@ const closedMixin = (theme) => ({
   },
 });
 
-
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
@@ -82,10 +81,6 @@ export default function Sidebar({ sidebarHeader }) {
     setOpen(true);
   };
 
-  // const handleDrawerClose = () => {
-  //   setOpen(false);
-  // };
-
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -113,13 +108,6 @@ export default function Sidebar({ sidebarHeader }) {
           <Typography textAlign={"left"} fontSize={"20px"} fontWeight={"bold"}>
             Stock Management System
           </Typography>
-          {/* <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "rtl" ? (
-              <ChevronRightIcon />
-            ) : (
-              <ChevronLeftIcon />
-            )}
-          </IconButton> */}
         </Box>
         <List>
           {menuItems.map((item) => (
