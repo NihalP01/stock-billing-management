@@ -7,7 +7,7 @@ import { Controls } from "../controls/Controls";
 import Popup from "../controls/Popup";
 
 const PurchaseEntryForm = () => {
-  const [invoiveNo, setInvoiveNo] = useState("");
+  const [invoiceNo, setinvoiceNo] = useState("");
   const [invoiceDate, setInvoiveDate] = useState("");
   const [vendor, setVendor] = useState("");
   const [type, setType] = useState("");
@@ -68,14 +68,14 @@ const PurchaseEntryForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const purchase = {
-      invoiveNo,
+      invoiceNo,
       invoiceDate,
       vendor,
       type,
       addedItems,
     };
     setAddedPurchase([...addedPurchase, purchase]);
-    setInvoiveNo("");
+    setinvoiceNo("");
     setInvoiveDate("");
     setVendor("");
     setType("");
@@ -103,9 +103,9 @@ const PurchaseEntryForm = () => {
               <Controls.CustomField
                 label="Invoice number"
                 size="small"
-                value={invoiveNo}
+                value={invoiceNo}
                 type="number"
-                onChange={(e) => setInvoiveNo(e.target.value)}
+                onChange={(e) => setinvoiceNo(e.target.value)}
               />
             </Grid>
             <Grid item xs={6}>
@@ -268,7 +268,7 @@ const PurchaseEntryForm = () => {
             onClick={handleSubmit}
             disabled={
               addedItems.length === 0 ||
-              !invoiveNo ||
+              !invoiceNo ||
               !invoiceDate ||
               !vendor ||
               !type

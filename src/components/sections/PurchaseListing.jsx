@@ -15,10 +15,10 @@ const PurchaseListing = () => {
           {data.map((item, index) => (
             <Box m={1} p={2} borderRadius={1} boxShadow={2} key={index}>
               <Typography textAlign={"left"}>
-                Invoice No: {item.invoiveNo}
+                Invoice No: {item.invoiceNo}
               </Typography>
               <Typography textAlign={"left"}>
-                Invoice Date: {item.invoiveDate}
+                Invoice Date: {item.invoiceDate}
               </Typography>
               <Typography textAlign={"left"}>Vendor: {item.vendor}</Typography>
               <Typography textAlign={"left"}>
