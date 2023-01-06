@@ -7,6 +7,7 @@ const DashboardHome = () => {
     <Box>
       <Sections.ProductListing />
       <Sections.PurchaseListing />
+      <Sections.VendorListing />
     </Box>
   );
 };

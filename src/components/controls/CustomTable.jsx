@@ -1,4 +1,5 @@
 import {
+  Paper,
   Table,
   TableBody,
   TableCell,
@@ -11,12 +12,14 @@ import React from "react";
 const CustomTable = (props) => {
   const { addedItems, columns } = props;
   return (
-    <TableContainer>
-      <Table aria-label="simple table">
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 800 }} aria-label="simple table">
         <TableHead>
           <TableRow>
             {columns.map((column) => (
-              <TableCell kye={column.id}>{column.value}</TableCell>
+              <TableCell align="right" kye={column.id}>
+                {column.value}
+              </TableCell>
             ))}
           </TableRow>
         </TableHead>

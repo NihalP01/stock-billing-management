@@ -152,13 +152,13 @@ const PurchaseEntryForm = () => {
             Add purchased items
           </Typography>
         </Grid>
-        <Grid item>
+        <Grid item xs={6} style={{ display: "flex", justifyContent: "left" }}>
           <Controls.CustomButton
             text={"Add item"}
             onClick={() => setOpen(true)}
           />
         </Grid>
-        <Grid item xs={4} display="flex">
+        <Grid item xs={2}>
           <Popup
             title="Item description"
             btnText={"Add item"}
@@ -250,7 +250,7 @@ const PurchaseEntryForm = () => {
           </Popup>
         </Grid>
         {addedItems && addedItems.length > 0 && (
-          <Box>
+          <Box mt={4}>
             <Controls.CustomTable
               addedItems={addedItems}
               columns={tableColumns}

@@ -13,7 +13,7 @@ export const tableColumns = [
   },
   {
     id: 4,
-    value: "GST",
+    value: "GST %",
   },
   {
     id: 5,

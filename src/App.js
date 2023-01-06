@@ -5,6 +5,7 @@ import CreateProductForm from "./components/forms/CreateProductForm";
 import CreateVendorForm from "./components/forms/CreateVendorForm";
 import PurchaseEntryForm from "./components/forms/PurchaseEntryForm";
 import SalesEntryForm from "./components/forms/SalesEntryForm";
+import ProductListing from "./components/sections/ProductListing";
 import DashboardHome from "./pages/DashboardHome";
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
             path="/"
             element={
               <Layout headerName={"Stock"}>
-                <DashboardHome />
+                <ProductListing />
               </Layout>
             }
           />
@@ -49,6 +50,14 @@ function App() {
             element={
               <Layout headerName={"Sales"}>
                 <SalesEntryForm />
+              </Layout>
+            }
+          />
+          <Route
+            path="/list"
+            element={
+              <Layout headerName={"Testing List"}>
+                <DashboardHome />
               </Layout>
             }
           />

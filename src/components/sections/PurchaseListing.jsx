@@ -43,7 +43,7 @@ const PurchaseListing = () => {
                     Product Rate: {item.rate}
                   </Typography>
                   <Typography textAlign={"left"}>
-                    Product ST: {item.gst}%
+                    Product GST: {item.gst}%
                   </Typography>
                   <Typography textAlign={"left"}>
                     Total: {item.total}
