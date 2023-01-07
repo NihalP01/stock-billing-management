@@ -8,7 +8,7 @@ export const menuItems = [
   {
     id: 0,
     title: "Stock",
-    link: "/",
+    link: "/stock",
     icon: Dashboard,
   },
   {

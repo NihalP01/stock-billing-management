@@ -73,10 +73,3 @@ const ProductListing = () => {
 };
 
 export default ProductListing;
-
-// <Controls.CustomList
-// key={index}
-// heading={"Name: " + item.name}
-// prodDes={"GST: " + item.gst}
-// prodDesSecond={"Category: " + item.category}
-// />

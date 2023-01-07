@@ -7,14 +7,16 @@ import PurchaseEntryForm from "./components/forms/PurchaseEntryForm";
 import SalesEntryForm from "./components/forms/SalesEntryForm";
 import ProductListing from "./components/sections/ProductListing";
 import DashboardHome from "./pages/DashboardHome";
+import Landing from "./pages/Landing/Landing";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Landing />} />
           <Route
-            path="/"
+            path="/stock"
             element={
               <Layout headerName={"Stock"}>
                 <ProductListing />
