@@ -31,7 +31,7 @@ const CustomTable = (props) => {
               </TableCell>
               <TableCell align="right">{item.quantity}</TableCell>
               <TableCell align="right">{item.rate}</TableCell>
-              <TableCell align="right">{item.gst}</TableCell>
+              <TableCell align="right">{item.gst}%</TableCell>
               <TableCell align="right">{item.total}</TableCell>
             </TableRow>
           ))}
