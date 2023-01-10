@@ -8,6 +8,7 @@ import SalesEntryForm from "./components/forms/SalesEntryForm";
 import ProductListing from "./components/sections/ProductListing";
 import DashboardHome from "./pages/DashboardHome";
 import Landing from "./pages/Landing/Landing";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+
           <Route
             path="/stock"
             element={
@@ -63,6 +65,8 @@ function App() {
               </Layout>
             }
           />
+          
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>

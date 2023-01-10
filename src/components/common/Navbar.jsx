@@ -33,6 +33,10 @@ const Navbar = () => {
     setAnchorElUser(null);
   };
 
+  const handleLogin = () => {
+    window.location.href = "/login";
+  };
+
   return (
     <AppBar
       position="static"
@@ -135,7 +139,14 @@ const Navbar = () => {
             ))}
           </Box>
 
-          <Box width={'180px'} sx={{ flexGrow: 0, display: 'flex', justifyContent: 'space-between' }}>
+          <Box
+            width={"180px"}
+            sx={{
+              flexGrow: 0,
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
             <Controls.CustomButton
               variant="text"
               style={{
@@ -145,6 +156,7 @@ const Navbar = () => {
               }}
               text="Login"
               color="primary"
+              onClick={handleLogin}
             />
             <Controls.CustomButton text={"Sign up"} color="primary" />
           </Box>

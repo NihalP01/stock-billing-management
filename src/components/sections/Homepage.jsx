@@ -13,10 +13,17 @@ const StyledGrid = styled(Grid)({
 });
 
 const Homepage = () => {
+  document.body.style =
+    "background: linear-gradient(90deg, rgb(249, 249, 249) 0%, rgb(242, 228, 255) 33%, rgb(255 240 240) 66%, rgb(255, 255, 255) 100%);";
+
+  const handleClick = () => {
+    window.location.href = "/stock";
+  } 
+
   return (
     <Box>
       <Box width={"100%"}>
-        <StyledGrid container spacing={2}>
+        <StyledGrid container spacing={6}>
           <Grid item xs={3}>
             <Typography textAlign={"left"} fontWeight="bold" variant="h2">
               Get paid faster and grow your business
@@ -28,10 +35,22 @@ const Homepage = () => {
               tincidunt et. Aenean varius sollicitudin massa, eu feugiat ipsum
               varius a. Sed euismod dictum pellentesque.
             </Typography>
-            <Controls.CustomButton text={"Start for free"} style={{marginTop: '2rem', width: '10rem',fontSize: '1rem'}}/>
+            <Controls.CustomButton
+              text={"Start for free"}
+              style={{
+                marginTop: "2rem",
+                width: "10rem",
+                fontSize: "1rem",
+                padding: "0.5rem",
+              }}
+              onClick={handleClick}
+            />
           </Grid>
           <Grid item xs={4}>
-            <Typography>This is section 2</Typography>
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/images/bg.png`}
+              width={"500px"}
+            />
           </Grid>
         </StyledGrid>
       </Box>

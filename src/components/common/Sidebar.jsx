@@ -15,6 +15,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { menuItems } from "../../data/menuItems";
 import { Link } from "react-router-dom";
+import { Controls } from "../controls/Controls";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 const drawerWidth = 300;
 
@@ -77,6 +79,10 @@ const Drawer = styled(MuiDrawer, {
 export default function Sidebar({ sidebarHeader }) {
   const [open, setOpen] = React.useState(true);
 
+  const handleLogout = () => {
+    window.location.href = "/";
+  };
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -103,6 +109,7 @@ export default function Sidebar({ sidebarHeader }) {
           </Typography>
         </Toolbar>
       </AppBar>
+
       <Drawer variant="permanent" open={open}>
         <Box p={2}>
           <Typography textAlign={"left"} fontSize={"20px"} fontWeight={"bold"}>
@@ -141,6 +148,14 @@ export default function Sidebar({ sidebarHeader }) {
             </ListItem>
           ))}
         </List>
+        <Box style={{ display: "flex", justifyContent: "center" }}>
+          <Controls.CustomButton
+            text="Logout"
+            startIcon={<LogoutIcon />}
+            style={{ position: "absolute", bottom: "20px" }}
+            onClick={handleLogout}
+          />
+        </Box>
       </Drawer>
     </Box>
   );
